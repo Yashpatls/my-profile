@@ -1,0 +1,120 @@
+/* ---------- RESET ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background: #0d1117; color: #e6edf3; }
+a { text-decoration: none; }
+
+/* ---------- LOGIN (Redesigned) ---------- */
+#loginPage {
+  display: flex; justify-content: center; align-items: center; height: 100vh;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+}
+.login-container {
+  background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(15px);
+  padding: 50px 40px; border-radius: 18px; width: 360px; text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+  animation: fadeIn 0.8s ease;
+}
+.login-container h2 { 
+  margin-bottom: 25px; 
+  color: #00eaff; 
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+.login-container input {
+  width: 100%; padding: 14px; margin: 12px 0; border-radius: 10px; border: none;
+  font-size: 15px; background: rgba(255,255,255,0.15); color: white;
+  outline: none; transition: 0.3s ease;
+}
+.login-container input:focus {
+  background: rgba(255,255,255,0.25); box-shadow: 0 0 10px #00eaff;
+}
+.login-container button {
+  background: linear-gradient(135deg,#00eaff,#0072ff);
+  border: none; padding: 14px; width: 100%;
+  border-radius: 10px; color: #fff; font-size: 17px; cursor: pointer; margin-top: 15px;
+  font-weight: bold; transition: transform 0.2s ease;
+}
+.login-container button:hover { transform: scale(1.05); }
+#errorMsg { margin-top: 12px; color: #ff5252; font-size: 14px; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- PORTFOLIO ---------- */
+#portfolio { display: none; }
+
+header {
+  background: #161b22; padding: 15px 40px; display: flex;
+  justify-content: space-between; align-items: center;
+  border-bottom: 1px solid #30363d; position: sticky; top: 0; z-index: 10;
+}
+header .logo { font-weight: bold; font-size: 22px; color: #00eaff; }
+nav a { margin: 0 15px; color: #c9d1d9; font-weight: 500; }
+nav a:hover { color: #00eaff; }
+.logout-btn {
+  background: #ff5252; color: white; border: none; padding: 8px 14px;
+  border-radius: 8px; cursor: pointer; font-size: 14px;
+}
+.logout-btn:hover { background: #d93030; }
+
+/* ---------- HERO ---------- */
+.hero {
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; padding: 80px 20px; background: linear-gradient(160deg, #1f2937, #0d1117);
+}
+.hero h1 { font-size: 50px; color: #00eaff; margin-bottom: 10px; }
+.hero p { max-width: 600px; margin: 15px auto; font-size: 18px; color: #c9d1d9; }
+.hero-buttons { margin-top: 20px; }
+.hero button {
+  padding: 10px 20px; margin: 5px;
+  border: none; border-radius: 6px; cursor: pointer; font-weight: bold;
+}
+.btn1 { background: #00eaff; color: black; }
+.btn2 { background: #6f42c1; color: white; }
+.btn3 { background: #161b22; color: #00eaff; border: 1px solid #00eaff; }
+
+.hero-img {
+  margin-top: 30px;
+}
+.hero-img img {
+  width: 220px; height: 220px; border-radius: 50%; object-fit: cover;
+  border: 4px solid #00eaff; box-shadow: 0 0 25px #00eaff;
+  transition: transform 0.4s ease;
+}
+.hero-img img:hover { transform: scale(1.07); }
+
+/* ---------- SECTIONS ---------- */
+section { max-width: 1100px; margin: 60px auto; padding: 20px; }
+section h2 { font-size: 30px; color: #00eaff; margin-bottom: 25px; text-align: center; }
+
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;
+}
+.card {
+  background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);
+  padding: 20px; border-radius: 15px; border: 1px solid #30363d;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+.card h3 { margin-bottom: 10px; color: #e6edf3; }
+
+.contact-grid { display: flex; gap: 20px; flex-wrap: wrap; }
+.contact-box {
+  background: #161b22; flex: 1; padding: 25px; border-radius: 12px;
+  border: 1px solid #30363d;
+}
+form {
+  flex: 1; background: rgba(255,255,255,0.08); padding: 25px; border-radius: 12px;
+  display: flex; flex-direction: column;
+}
+form input, form textarea {
+  margin-bottom: 15px; padding: 12px; border-radius: 8px; border: none;
+  background: rgba(255,255,255,0.2); color: white;
+}
+form button {
+  background: #00eaff; border: none; padding: 12px;
+  color: black; border-radius: 8px; cursor: pointer; font-weight: bold;
+}
+
+footer { text-align: center; padding: 15px; background: #161b22; color: #8b949e; margin-top: 30px; }
